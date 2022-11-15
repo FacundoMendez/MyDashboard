@@ -1,0 +1,113 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select:none !important;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html{
+  font-size: 62.5%;
+  background-color: rgba(0, 0, 0, 0.998);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-right: none;
+  background-position: top;
+}
+::-webkit-scrollbar-button {
+width: 0px;
+height: 0px;
+}
+::-webkit-scrollbar-thumb {
+background-color: rgba(219, 197, 248, 0.315);
+backdrop-filter: blur(1rem);
+border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #d0a6ff;
+}
+::-webkit-scrollbar-thumb:active {
+background: #8b4dff;
+}
+
+::-webkit-scrollbar-corner {
+background: transparent;
+}
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./components/assets/fonts/Montserrat-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('./components/assets/fonts/Montserrat-SemiBold.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  overflow: hidden;
+}
+
+.imgBlurRight{
+  background-image: url("./components/assets/blur-colors.png");
+  width: 830px;
+  position: fixed;
+  right: -580px;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transition: 3s;
+  opacity: .6;
+  animation: move2 15s infinite linear;
+}
+
+.imgBlurLeft{
+  background-image: url("./components/assets/blur-colors.png");
+  width: 830px;
+  position: fixed;
+  left: -480px;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: 3s;
+  opacity: .6;
+  animation: move 15s infinite linear;
+}
+
+
+@keyframes move {
+  0%{left: -480px;}
+  50%{left: -400px; rotate: 90deg;}
+  100%{left: -480px;}
+}
+
+
+@keyframes move2 {
+  0%{  right: -580px;}
+  50%{  right: -400px; rotate: 90deg;}
+  100%{  right: -580px;}
+}
+
+.smoke{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  filter: contrast(110%) brightness(100%) hue-rotate(10deg);
+}
+
