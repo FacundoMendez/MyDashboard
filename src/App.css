@@ -108,6 +108,6 @@ body{
   height: 100%;
   object-fit: cover;
   position: absolute;
-  filter: contrast(110%) brightness(100%) hue-rotate(10deg);
+  filter: contrast(110%) brightness(100%) hue-rotate(150deg);
 }
 

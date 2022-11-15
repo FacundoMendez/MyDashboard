@@ -1,17 +1,16 @@
 import React, {useEffect} from 'react'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import webGl_basicScene from './webGL_basicScene'
+import webGl_animations from './WebGL_animations'
 
-const SceneBasic = () => {
-
+const Animations = () => {
   const [activeScene, setActiveScene ] = useState(true)
 
 
   useEffect(() => {
 
     if(activeScene){
-      webGl_basicScene()
+      webGl_animations()
     }
     
   },[activeScene])
@@ -20,11 +19,12 @@ const SceneBasic = () => {
     <div className="sceneBasic">
        <NavLink to="/Capitulo1" className="linkHome" onClick={() => setActiveScene(false)}>Back </NavLink>
 
-       {activeScene ?  <canvas className='webGl_basicScene'></canvas> : null}
+       {activeScene ?  <canvas className='webGl_animations'></canvas> : null}
 
        
     </div>
   )
 }
 
-export default SceneBasic
+
+export default Animations

@@ -9,6 +9,7 @@ import Box from '../box/Box'
 
 import cap1img  from "./src/cap1.png"
 import cap2img from "./src/cap2.png"
+import { useLayoutEffect } from 'react'
 
 const Capitulo1 = () => {
 
@@ -66,6 +67,11 @@ const Capitulo1 = () => {
         }
         
       ]
+
+
+      useLayoutEffect(() => {
+
+      },[])
 
       
   useEffect(() => {

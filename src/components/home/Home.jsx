@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import "./home.css"
-import smoke from "../assets/smoke.mp4"
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import move from '../move'
@@ -12,6 +11,7 @@ import cap4Img from "../assets/src/4.webp"
 import cap5Img from "../assets/src/5.webp"
 import cap6Img from "../assets/src/6.webp"
 import cap7Img from "../assets/src/7.webp"
+
 
 const Home = () => {
 
@@ -53,19 +53,18 @@ const Home = () => {
     },
   ]
 
+
+
+
   useEffect(() => {
     let tl = gsap.timeline({
-      duration:2,
+      duration:.2,
     });
     tl.from(".box_levels" , {
       opacity:0,
       display:"none"
     })
 
-    tl.to(".smoke" , {
-      opacity:0,
-      display:"none"
-    })
 
     move()
   },[])
@@ -76,7 +75,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-        <video  className='smoke' src={smoke} autoPlay loop muted></video>
 
       <div className="box_levels ">
         {arrLevel.map((index, key)  => {
@@ -84,7 +82,7 @@ const Home = () => {
               <div className="box_slider box"> 
                 <img className='imgBox_home'  src={index.img} alt="back box" />
                 <p className="textBox">{index.descripcion}</p>
-            </div>
+              </div>
            </NavLink> 
           })
         }
