@@ -70,7 +70,6 @@ body{
   height: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
-  z-index: 0;
   transition: 3s;
   opacity: .6;
   animation: move2 15s infinite linear;
@@ -111,3 +110,20 @@ body{
   filter: contrast(110%) brightness(100%) hue-rotate(150deg);
 }
 
+canvas{
+  cursor: grab;
+  outline: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  
+.imgBlurRight , .imgBlurLeft{
+  z-index: -1;
+}
+
+
+}

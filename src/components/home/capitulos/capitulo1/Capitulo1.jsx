@@ -9,7 +9,9 @@ import Box from '../box/Box'
 
 import cap1img  from "./src/cap1.png"
 import cap2img from "./src/cap2.png"
-import { useLayoutEffect } from 'react'
+import cap3img from "./src/cap3.png"
+import cap4img from "./src/cap4.png"
+
 
 const Capitulo1 = () => {
 
@@ -26,12 +28,12 @@ const Capitulo1 = () => {
           href: "/TransformObjects"
         },
         {
-          img:imgPrueba,
+          img:cap3img,
           descripcion:"Animations",
           href: "/Animations"
         },
         {
-          img:imgPrueba,
+          img:cap4img,
           descripcion:"Cameras",
           href: "/Cameras"
         },
@@ -68,10 +70,6 @@ const Capitulo1 = () => {
         
       ]
 
-
-      useLayoutEffect(() => {
-
-      },[])
 
       
   useEffect(() => {

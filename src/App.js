@@ -15,9 +15,9 @@ import Spinner from './components/assets/spinner/Spinner';
 /* cap1 */
 
 const TransformObjects = lazy(() => import('./components/home/capitulos/capitulo1/sections/transformObjects/TransformObjects'))
-const Cameras = lazy(() => import('./components/home/capitulos/capitulo1/sections/Cameras'))
+const Cameras = lazy(() => import('./components/home/capitulos/capitulo1/sections/cameras/Cameras'))
 const Animations = lazy(() => import('./components/home/capitulos/capitulo1/sections/animations/Animations'))
-const FullScreenAndResizing = lazy(() => import('./components/home/capitulos/capitulo1/sections/FullScreenAndResizing'))
+const FullScreenAndResizing = lazy(() => import('./components/home/capitulos/capitulo1/sections/fullScreenAndResizing/FullScreenAndResizing'))
 const Geometries = lazy(() => import('./components/home/capitulos/capitulo1/sections/Geometries'))
 const DebugUI = lazy(() => import('./components/home/capitulos/capitulo1/sections/DebugUI'))
 const Materials = lazy(() => import('./components/home/capitulos/capitulo1/sections/Materials'))

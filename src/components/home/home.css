@@ -147,6 +147,21 @@
     transform: translateZ(160px);
 }
 
+.fullScreen{
+    position:absolute;
+    right:3%;
+    width:5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    bottom:5%; 
+}
+
+.fullScreenImg:hover{
+    scale: 1.2;
+    transition: all .4s ease;
+}
 
 @media screen and (max-width:1440px) {
     .box_levels{

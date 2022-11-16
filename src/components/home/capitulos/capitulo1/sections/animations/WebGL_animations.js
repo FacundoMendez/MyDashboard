@@ -25,7 +25,8 @@ const webGl_animations = () => {
     /*   renderer  */
 
     const renderer = new THREE.WebGL1Renderer({
-        canvas:canvas
+        canvas:canvas,
+        alpha:true
     })
     renderer.setSize(sizes.width , sizes.height)
 
@@ -40,7 +41,9 @@ const webGl_animations = () => {
 
 
         Mesh.rotation.y = elapsedTime
-
+        Mesh.position.x = Math.sin(elapsedTime)
+        Mesh.position.y = Math.cos(elapsedTime)
+        /* camera.lookAt(Mesh.position) */
 
         renderer.render(scene, camera)
         window.requestAnimationFrame(tick)

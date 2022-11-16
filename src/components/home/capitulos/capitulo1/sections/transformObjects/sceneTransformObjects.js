@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
 
 const sceneTransformObjects = () => {
 
@@ -46,9 +48,6 @@ const sceneTransformObjects = () => {
     scene.add(ejes)
 
 
-
-
-
     /* camera */
     
     const camera = new THREE.PerspectiveCamera( 75, sizes.width / sizes.height)
@@ -56,11 +55,37 @@ const sceneTransformObjects = () => {
     scene.add(camera)
 
     const renderer = new THREE.WebGL1Renderer({
-        canvas:canvas
+        canvas:canvas,
+        alpha:true
     })
 
     renderer.setSize(sizes.width , sizes.height)
-    renderer.render(scene, camera)
+
+
+    const controls = new OrbitControls(camera, canvas)
+    controls.enableDamping= true
+
+
+    let clock = new THREE.Clock()
+
+    const tick = ( ) => {
+
+        const elapsedTime = clock.getElapsedTime()
+
+        cube1.rotation.y = elapsedTime
+        cube2.rotation.y = elapsedTime
+        cube3.rotation.y = elapsedTime
+        cube1.position.y = Math.sin(elapsedTime) * 0.2
+        cube2.position.y = Math.sin(elapsedTime) * 0.2
+        cube3.position.y = Math.sin(elapsedTime) * 0.2
+
+        controls.update()
+        renderer.render(scene, camera)
+        window.requestAnimationFrame(tick)
+
+    }
+
+    tick()
 
 
 

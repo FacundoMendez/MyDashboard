@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
 
 const webGl_basicScene = () => {
 
@@ -23,7 +25,6 @@ const webGl_basicScene = () => {
         height: window.innerHeight
     }
 
- 
 
 
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height  )
@@ -35,10 +36,35 @@ const webGl_basicScene = () => {
 
     const renderer = new THREE.WebGL1Renderer({
         canvas:canvas,
+        alpha:true
     })
 
     renderer.setSize(sizes.width , sizes.height)
-    renderer.render(scene, camera)
+
+    
+
+ 
+    /* controls */
+
+    const controls = new OrbitControls(camera, canvas)
+    controls.enableDamping= true
+
+
+    const clock = new THREE.Clock()
+
+    const tick = () => {
+        const elapsedTime = clock.getElapsedTime()
+
+        Mesh.rotation.y = elapsedTime
+
+        controls.update()
+        renderer.render(scene, camera)
+        window.requestAnimationFrame(tick)
+
+    }
+
+    tick()
+
 
 
 }
