@@ -42,6 +42,17 @@ const sceneTransformObjects = () => {
     }
 
 
+    window.addEventListener("resize", () => {
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
+
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+        renderer.setSize(sizes.width , sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    })
+
     /* ayudante de ejes */
 
     const ejes = new THREE.AxesHelper()
@@ -60,6 +71,7 @@ const sceneTransformObjects = () => {
     })
 
     renderer.setSize(sizes.width , sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
 
     const controls = new OrbitControls(camera, canvas)

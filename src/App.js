@@ -18,7 +18,7 @@ const TransformObjects = lazy(() => import('./components/home/capitulos/capitulo
 const Cameras = lazy(() => import('./components/home/capitulos/capitulo1/sections/cameras/Cameras'))
 const Animations = lazy(() => import('./components/home/capitulos/capitulo1/sections/animations/Animations'))
 const FullScreenAndResizing = lazy(() => import('./components/home/capitulos/capitulo1/sections/fullScreenAndResizing/FullScreenAndResizing'))
-const Geometries = lazy(() => import('./components/home/capitulos/capitulo1/sections/Geometries'))
+const Geometries = lazy(() => import('./components/home/capitulos/capitulo1/sections/geometries/Geometries'))
 const DebugUI = lazy(() => import('./components/home/capitulos/capitulo1/sections/DebugUI'))
 const Materials = lazy(() => import('./components/home/capitulos/capitulo1/sections/Materials'))
 const Text3d = lazy(() => import('./components/home/capitulos/capitulo1/sections/Text3d'))

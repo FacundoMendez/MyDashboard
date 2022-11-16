@@ -11,7 +11,7 @@ import cap1img  from "./src/cap1.png"
 import cap2img from "./src/cap2.png"
 import cap3img from "./src/cap3.png"
 import cap4img from "./src/cap4.png"
-
+import cap5img from "./src/cap5.png"
 
 const Capitulo1 = () => {
 
@@ -38,7 +38,7 @@ const Capitulo1 = () => {
           href: "/Cameras"
         },
         {
-          img:imgPrueba,
+          img:cap5img,
           descripcion:"Fullscreen and resizing",
           href: "/FullScreenAndResizing"
         },

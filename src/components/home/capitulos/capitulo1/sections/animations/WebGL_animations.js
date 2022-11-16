@@ -10,14 +10,25 @@ const webGl_animations = () => {
         height: window.innerHeight
     }
 
+    window.addEventListener("click", () => {
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
+
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+        renderer.setSize(sizes.width , sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
+    })
+
     const camera = new THREE.PerspectiveCamera(75 , sizes.width / sizes.height )
     camera.position.z = 3
     scene.add(camera)
 
 
 
-    const geometry = new THREE.BoxGeometry(1,1,1)
-    const material = new THREE.MeshBasicMaterial({color:"violet" , wireframe:true})
+    const geometry = new THREE.BoxGeometry(1,1,1 ,10 , 10 ,10)
+    const material = new THREE.MeshBasicMaterial({color:"#00ff00" , wireframe:true})
     const Mesh = new THREE.Mesh(geometry, material)
 
     scene.add(Mesh)
@@ -29,7 +40,7 @@ const webGl_animations = () => {
         alpha:true
     })
     renderer.setSize(sizes.width , sizes.height)
-
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio,2))
 
 
 
@@ -41,8 +52,8 @@ const webGl_animations = () => {
 
 
         Mesh.rotation.y = elapsedTime
-        Mesh.position.x = Math.sin(elapsedTime)
-        Mesh.position.y = Math.cos(elapsedTime)
+        Mesh.position.x = Math.sin(elapsedTime) 
+        Mesh.position.y = Math.cos(elapsedTime) 
         /* camera.lookAt(Mesh.position) */
 
         renderer.render(scene, camera)
