@@ -12,6 +12,8 @@ import cap2img from "./src/cap2.png"
 import cap3img from "./src/cap3.png"
 import cap4img from "./src/cap4.png"
 import cap5img from "./src/cap5.png"
+import cap6img from "./src/cap6.png"
+
 
 const Capitulo1 = () => {
 
@@ -43,7 +45,7 @@ const Capitulo1 = () => {
           href: "/FullScreenAndResizing"
         },
         {
-          img:imgPrueba,
+          img:cap6img,
           descripcion:"Geometries",
           href: "/Geometries"
         },

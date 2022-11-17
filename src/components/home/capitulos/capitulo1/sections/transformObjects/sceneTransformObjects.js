@@ -16,7 +16,7 @@ const sceneTransformObjects = () => {
 
     const geometry = new THREE.BoxGeometry(1,1,1)
 
-    const material = new THREE.MeshBasicMaterial({color:"red"})
+    const material = new THREE.MeshBasicMaterial({color:"#ff006f"})
 
     const cube1 = new THREE.Mesh(geometry, material)
     cube1.position.x = -2

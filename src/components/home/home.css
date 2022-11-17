@@ -163,6 +163,13 @@
     transition: all .4s ease;
 }
 
+.hoverMesh{
+    padding: 2rem;
+    font-size: 2rem;
+    color: white;
+    border: 2px solid red;
+}
+
 @media screen and (max-width:1440px) {
     .box_levels{
         width: 100%;
